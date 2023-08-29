@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body{
+    background-color: #fffbf7;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #ece8e4;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1{
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+header img{
+    width: 10%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    background-color: #f7f1eb;
+    padding: 0;
+}
+
+nav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+} 
+
+nav ul li a{
+    display: inline-block; /* Lo convierto en inlineblock asi puedo modificar el ancho */
+    width: 100%;
+    padding: 3% 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+}
+
+nav ul li a:hover{
+    background-color: #00000015;
+    box-shadow: 0 0 2px rgb(201, 200, 200);
+}
+
+main{
+    margin: 1% 5%;
+}
+
+main article{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 3% 10%;
+}
+
+main article section{
+    border: 1px solid lightgray;
+    width: 30%;
+    border-radius: 8px;
+    min-width: 200px;
+    margin: 2%;
+}
+
+main article section:hover{
+    box-shadow: 1px 1px 4px lightgray;
+}
+
+main article section h2{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px lightgray;
+}
+
+main article section p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0 15% 15%;
+}
+
+main article section img{
+    width: 70%;
+}
+
+@media(max-width:600px){
+    main article{
+        flex-wrap: wrap;
+    }
+}
+
+footer{
+    background-color: #f7f1eb;
+    width: 100%;
+    text-align: center;
+}
+
+footer #year{
+    display: block;
+    margin: auto;
+    padding: 0 0 1%;
+}
+
+footer #informacion{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+footer #informacion ul{
+    padding: 0;
+    margin: 3%;
+    list-style: none;
+    min-width: 250px;
+}
+
+footer #informacion ul iframe{
+    margin: 20px;
+}
+
+footer #informacion ul li{
+    margin: 10px;
+}
+
+footer #informacion ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+footer #informacion ul li a:hover{
+    color: rgb(155, 9, 9);
+    text-decoration: underline;
+}
+
+@media(max-width:600px){
+    footer #informacion{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:850px){
+    footer #informacion ul{
+        min-width: auto;
+    }
+    main article section{
+        max-height: 400px;
+        overflow: auto;
+    }
+}
