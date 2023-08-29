@@ -197,7 +197,13 @@ footer #informacion ul li a:hover{
     }
     main article{
         flex-wrap: wrap;
+        margin: 1% 0;
     }
+
+    main article a{
+        min-width: 90%;
+    }
+
     nav ul li a{
         height: 30px;
     }
@@ -208,7 +214,8 @@ footer #informacion ul li a:hover{
         min-width: auto;
     }
     main article a{
-        max-height: 400px;
+        max-height: 300px;
+        margin: 1% 0;
         overflow: auto;
     }
 }
