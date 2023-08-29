@@ -66,13 +66,13 @@ nav ul li a:hover{
 }
 
 main{
-    margin: 0 5%;
+    margin: 0;
 }
 
 .slider-frame{
-    max-width: 1280px;
     max-height: 720px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -91,6 +91,8 @@ main{
 .slider-frame img{
     width: 100%;
     margin: 0;
+    position: relative;
+    bottom: 16px;
 }
 
 @keyframes slide {
