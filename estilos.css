@@ -70,7 +70,7 @@ main{
 }
 
 .slider-frame{
-    max-height: 720px;
+    max-height: 600px;
     width: 100%;
     margin: 0;
     overflow: hidden;
