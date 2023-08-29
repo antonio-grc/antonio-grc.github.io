@@ -197,7 +197,7 @@ footer #informacion ul li a:hover{
     }
     main article{
         flex-wrap: wrap;
-        margin: 1% 0;
+        margin: 1% 0 10%;
     }
 
     main article a{
