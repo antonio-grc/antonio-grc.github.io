@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body{
     background-color: #fffbf7;
@@ -11,24 +12,28 @@ header{
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row-reverse;
 }
 
 header h1{
     margin-bottom: 0;
     margin-top: 20px;
-    font-size: 4rem;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
 header img{
-    width: 10%;
-    margin-top: 0;
-    margin-bottom: 20px;
+    width: 200px;
+    margin: 20px;
+}
+
+nav{
+    position: sticky;
+    top: 0px;
+    font-size: 1.2rem;
 }
 
 nav ul{
@@ -47,8 +52,7 @@ nav ul li{
 } 
 
 nav ul li a{
-    display: inline-block; /* Lo convierto en inlineblock asi puedo modificar el ancho */
-    width: 100%;
+    display: block; /* Lo convierto en block para que ocupe todo el ancho posible */
     padding: 3% 0;
     text-decoration: none;
     color: black;
@@ -62,7 +66,45 @@ nav ul li a:hover{
 }
 
 main{
-    margin: 1% 5%;
+    margin: 0 5%;
+}
+
+.slider-frame{
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%;
+    margin: 0;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
 }
 
 main article{
@@ -72,44 +114,42 @@ main article{
     margin: 3% 10%;
 }
 
-main article section{
+main article a{
     border: 1px solid lightgray;
     width: 30%;
     border-radius: 8px;
     min-width: 200px;
     margin: 2%;
+    text-decoration: none;
+    color: black;
 }
 
-main article section:hover{
+main article a:hover{
     box-shadow: 1px 1px 4px lightgray;
 }
 
-main article section h2{
+main article a h2{
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     text-transform: capitalize;
-    text-shadow: 1px 1px 2px lightgray;
 }
 
-main article section p{
+main article a p{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 0 15% 15%;
+    font-size: 1.2rem;
 }
 
-main article section img{
+main article a img{
     width: 70%;
-}
-
-@media(max-width:600px){
-    main article{
-        flex-wrap: wrap;
-    }
 }
 
 footer{
     background-color: #f7f1eb;
     width: 100%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 footer #year{
@@ -155,14 +195,32 @@ footer #informacion ul li a:hover{
         flex-direction: column;
         align-items: center;
     }
+    main article{
+        flex-wrap: wrap;
+    }
+    nav ul li a{
+        height: 30px;
+    }
 }
 
 @media(max-width:850px){
     footer #informacion ul{
         min-width: auto;
     }
-    main article section{
+    main article a{
         max-height: 400px;
         overflow: auto;
+    }
+}
+
+@media(min-width:3000px){
+    main{
+        margin: 0 30%;
+    }
+    *{
+        font-size: 1.5rem;
+    }
+    footer #informacion ul{
+        min-width: 600px;
     }
 }
