@@ -31,6 +31,7 @@ header img{
 }
 
 nav{
+    z-index: 1;
     position: sticky;
     top: 0px;
     font-size: 1.2rem;
@@ -70,7 +71,7 @@ main{
 }
 
 .slider-frame{
-    max-height: 600px;
+    max-height: 500px;
     width: 100%;
     margin: 0;
     overflow: hidden;
