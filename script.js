@@ -37,9 +37,9 @@ function cambiarClase(elementoClic, categoria) {
     // Definir las carpetas y las imágenes
     const carpetas = ['retratos', 'eventos', 'productos'];
     const cantidadImagenesPorCarpeta = {
-      retratos: 238,
-      eventos: 657,
-      productos: 401
+      retratos: 99,
+      eventos: 99,
+      productos: 99
     };
 
     // Obtener las columnas
